@@ -8,8 +8,15 @@ def calc_media(nota1, nota2, nota3):
         print("Aprovado")
 
 
-nota1 = int(input("Digite a primeira nota: "))
-nota2 = int(input("Digite a segunda nota: "))
-nota3 = int(input("Digite a terceira nota: "))
+continuar = True
+while continuar:
+    nota1 = int(input("Digite a primeira nota: "))
+    nota2 = int(input("Digite a segunda nota: "))
+    nota3 = int(input("Digite a terceira nota: "))
 
-calc_media(nota1, nota2, nota3)
+    pergunta = int(input("Deseja calcular a media de outro aluno? \n[ 1 ] - SIM\n[ 2 ] - NÃO\n"))
+
+    if (pergunta == 2):
+        continuar = False
+        break
+    calc_media(nota1, nota2, nota3)
